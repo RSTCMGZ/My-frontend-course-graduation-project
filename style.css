@@ -32,4 +32,12 @@
 .header-bottom {
   padding: 30px 0;
   width: 100%;
+  border-bottom: 1px solid #ececec;
+}
+.nav-item a:hover,
+.nav-item .number {
+  color: #3bb77e;
+}
+.header-bottom i {
+  font-size: 15px;
 }
