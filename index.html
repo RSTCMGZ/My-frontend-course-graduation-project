@@ -18,88 +18,132 @@
     <title>Shopus</title>
   </head>
   <body>
-    <nav class="navbar header navbar-expand-lg bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="img/logo.svg" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav justify-content-center w-100">
-            <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item text-white">
-              <a class="nav-link text-white" href="#">Shop+</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Pages+</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">User Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Contact</a>
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar header navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.svg" class="img-fluid w-75" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="input-group position-relative w-50 flex-nowrap">
+            <input
+              type="text"
+              class="form-control shadow-none"
+              placeholder="Search for items"
+              aria-label="Username"
+              aria-describedby="addon-wrapping"
+            />
+            <i class="bi bi-search position-absolute fs-5"></i>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-center w-100">
+              <li class="nav-item">
+                <a
+                  class="nav-link position-relative"
+                  aria-current="page"
+                  href="#"
+                >
+                  <span class="count">0</span>
+                  <i class="bi bi-arrow-repeat"></i>
+                  Compare
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link position-relative" href="#">
+                  <span class="count">0</span>
+
+                  <i class="bi bi-heart"></i>
+                  Wishlist
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link position-relative" href="#">
+                  <span class="count">0</span>
+
+                  <i class="bi bi-cart"></i>
+                  Cart
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link position-relative" href="#">
+                  <i class="bi bi-person"></i>
+                  Account
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav justify-content-center w-100">
-            <li class="nav-item">
-              <a
-                class="nav-link position-relative"
-                aria-current="page"
-                href="#"
-              >
-                <span class="count">0</span>
-                <i class="bi bi-arrow-repeat"></i>
-                Compare
-              </a>
-            </li>
+      </nav>
+      <div class="header-bottom">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <button class="btn btn-success">
+              <i class="bi bi-browser-chrome fw-bold"></i>
+              Browse All Categories <i class="bi bi-chevron-down"></i>
+            </button>
 
-            <li class="nav-item">
-              <a class="nav-link position-relative" href="#">
-                <span class="count">0</span>
-
-                <i class="bi bi-heart"></i>
-                Wishlist
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link position-relative" href="#">
-                <span class="count">0</span>
-
-                <i class="bi bi-cart"></i>
-                Cart
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link position-relative" href="#">
-                <i class="bi bi-person-fill"></i>
-                Account
-              </a>
-            </li>
-          </ul>
-        </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Deals</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   </body>
 </html>
