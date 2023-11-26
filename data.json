@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "name": "Cake ",
+        "discount": 22,
+        "img": {
+            "singleImage": "img/categories/cat-13.png"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Organic Kiwi",
+    
+        "discount": 33,
+        "img": {
+            "singleImage": "img/categories/cat-12.png"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Peach",
+        "discount": 90,
+        "img": {
+            "singleImage": "img/categories/cat-11.png"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Red Apple",
+        "discount": 55,
+        "img": {
+            "singleImage": "img/categories/cat-9.png"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Snack",
+        "discount": 40,
+        "img": {
+            "singleImage": "img/categories/cat-3.png"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Vegetables",
+        "discount": 30,
+        "img": {
+            "singleImage": "img/categories/cat-1.png"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Strawberry",
+        "discount": 33,
+        "img": {
+            "singleImage": "img/categories/cat-2.png"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Black plum",
+        "discount": 43,
+        "img": {
+            "singleImage": "img/categories/cat-4.png"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Custard apple",
+        "discount": 53,
+        "img": {
+            "singleImage": "img/categories/cat-5.png"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Coffe & tea",
+        "discount": 59,
+        "img": {
+            "singleImage": "img/categories/cat-14.png"
+        }
+    }
+   
+]
