@@ -83,7 +83,8 @@
 }
 /*! slider end */
 /*! categories start */
-.categories .navbar-nav {
+.categories .navbar-nav,
+.sells .navbar-nav {
   flex-direction: unset;
 }
 .row .col-2 {
@@ -146,6 +147,36 @@
   border: none;
 }
 /*! banners-card end  */
+/*! products  start  */
+
 .stars .bi-star-fill {
   color: gold;
 }
+.card {
+  transition: 0.3s ease-in all;
+}
+.col-3 .card:hover {
+  border: 1px solid green;
+}
+/*! products  end  */
+/*! best sells start  */
+.banner {
+  background: url(img/banner/banner-4.png) no-repeat center bottom;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  background-size: cover;
+  height: 520px;
+}
+
+.banner .banner-text h2 {
+  font-size: 40px !important;
+  color: #253d4e;
+}
+.add a {
+  left: 15%;
+}
+.sells .col-9 .col-3 .card {
+  width: 214px !important;
+}
+/*! best sells end  */
