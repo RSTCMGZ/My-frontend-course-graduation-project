@@ -132,3 +132,20 @@
 }
 
 /*! categories end */
+/*! banners-card start  */
+.banner-text {
+  top: 20%;
+  left: 10%;
+}
+.banner-text a {
+  transition: 0.3s ease-in all;
+}
+.banner-text a:hover {
+  background-color: #fdc040;
+  color: #fff;
+  border: none;
+}
+/*! banners-card end  */
+.stars .bi-star-fill {
+  color: gold;
+}
