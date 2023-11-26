@@ -1,4 +1,7 @@
 /*! header start */
+body {
+  overflow-x: hidden;
+}
 .header {
   padding: 30px 0;
   border-bottom: 1px solid #ececec;
@@ -87,13 +90,13 @@
 .sells .navbar-nav {
   flex-direction: unset;
 }
-.row .col-2 {
+.categories .row .col-2 {
   background: #f4f6fa;
   text-align: center;
   border: 1px solid #f4f6fa;
   border-radius: 10px;
 }
-.row .col-2:hover {
+.categories .row .col-2:hover {
   -webkit-box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
@@ -180,3 +183,41 @@
   width: 214px !important;
 }
 /*! best sells end  */
+/*! all start */
+.all .col-3 h4 {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+.all .col-3 h4:after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #bce3c9;
+}
+/*! all end */
+/*! footer-top start */
+.footer-top .col-3 {
+  width: 19%;
+  background: #f4f6fa;
+  border-radius: 10px;
+  padding: 20px;
+}
+.footer-top h3 {
+  font-size: 18px;
+  color: #242424;
+}
+/*! footer-top end */
+/*! footer start */
+.footer .nav-item i {
+  color: #3bb77e;
+  font-size: 18px;
+}
+.footer .img {
+  max-width: 100% !important;
+}
+/*! footer end */
