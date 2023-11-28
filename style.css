@@ -39,7 +39,7 @@ header {
   z-index: 9999;
 }
 .header-bottom {
-  padding: 30px 0;
+  padding: 30px 0 !important;
   width: 100%;
   border-top: 1px solid #ececec;
 }
@@ -47,7 +47,7 @@ header {
 .nav-item .number {
   color: #3bb77e;
 }
-.header-bottom i {
+header i {
   font-size: 15px;
 }
 /*! header end */
@@ -95,13 +95,13 @@ header {
 .sells .navbar-nav {
   flex-direction: unset;
 }
-.categories .row .col-2 {
+.categories .row .featured {
   background: #f4f6fa;
   text-align: center;
   border: 1px solid #f4f6fa;
   border-radius: 10px;
 }
-.categories .row .col-2:hover {
+.categories .row .featured:hover {
   -webkit-box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
