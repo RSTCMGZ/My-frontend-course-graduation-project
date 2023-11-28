@@ -147,7 +147,7 @@ header i {
 .category .stars .bi-star-half {
   color: gold;
 }
-.category .card a:hover {
+.category .cards a:hover {
   color: #fdc040 !important;
 }
 
