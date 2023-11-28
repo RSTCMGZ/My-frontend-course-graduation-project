@@ -139,6 +139,17 @@ header {
   background-color: #3bb77e;
   color: #fff;
 }
+.category .cards {
+  -webkit-box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
+}
+.category .stars .bi-star-half {
+  color: gold;
+}
+.category .card a:hover {
+  color: #fdc040 !important;
+}
 
 /*! categories end */
 /*! banners-card start  */
@@ -236,3 +247,13 @@ header {
   background-color: #000 !important;
 }
 /*! footer end */
+/*! login start */
+.login {
+  border: 1px solid #3bb77e;
+  padding: 5%;
+  border-radius: 50px;
+  -webkit-box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
+}
+/*! login end */
