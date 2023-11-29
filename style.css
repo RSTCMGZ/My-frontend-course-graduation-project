@@ -257,3 +257,15 @@ header i {
   box-shadow: 8px -9px 41px 3px rgba(0, 0, 0, 0.75);
 }
 /*! login end */
+/*! contact start */
+.textarea {
+  height: 250px !important;
+}
+.buton {
+  border: none;
+  transition: 0.2s all ease-in;
+}
+.buton:hover {
+  background-color: #3bb77e;
+}
+/*! contact end */
