@@ -269,3 +269,47 @@ header i {
   background-color: #3bb77e;
 }
 /*! contact end */
+
+/*! blogs start */
+.sidebar {
+  padding: 30px 10px;
+  border: 1px solid #ececec;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+}
+.sidebar h2 {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+.sidebar h2::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #bce3c9;
+}
+.sidebar li {
+  padding: 10px;
+}
+.sidebar .count-1 {
+  top: 10px;
+  right: 25px;
+  background-color: #bce3c9;
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.sidebar img {
+  max-width: 30px;
+  margin-right: 15px;
+}
+/*! blogs end */
