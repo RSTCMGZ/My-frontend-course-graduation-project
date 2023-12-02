@@ -1,6 +1,5 @@
 
 
-const wrapper = document.querySelector(".wrapper")
 const basket = document.querySelector(".basket")
 const tikla = document.querySelector(".tıkla")
 let api = "https://dummyjson.com/products"
