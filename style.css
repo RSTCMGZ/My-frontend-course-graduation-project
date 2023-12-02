@@ -339,3 +339,30 @@ header i {
   color: gold;
 }
 /*! blogs end */
+/*! shopping start */
+.basket {
+  position: absolute;
+  right: -50px;
+  top: -15px;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  overflow: auto;
+  margin: auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50px;
+  z-index: 2;
+  display: none;
+}
+
+.hide {
+  display: block;
+}
+.basket div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*! shopping end */
