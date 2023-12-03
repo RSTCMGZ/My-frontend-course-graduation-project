@@ -378,3 +378,31 @@ header i {
   align-items: center;
 }
 /*! shopping end */
+/*! modal start */
+.modal-dialog {
+  border-radius: 25px;
+  padding: 40px;
+  border: 1px solid #bce3c9;
+}
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  height: 100vh;
+}
+.modal-body .img {
+  background-image: url(img/modal/popup-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  height: auto;
+}
+/*! modal end */
