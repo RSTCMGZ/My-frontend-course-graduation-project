@@ -379,30 +379,84 @@ header i {
 }
 /*! shopping end */
 /*! modal start */
-.modal-dialog {
-  border-radius: 25px;
-  padding: 40px;
-  border: 1px solid #bce3c9;
-}
-.modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+/*! modal search start */
+.modal-search {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease all;
 }
-.modal-body .img {
+
+.modal-search::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.modal-wrapper {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  padding: 30px;
   background-image: url(img/modal/popup-1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 100%;
-  height: auto;
+  border-radius: 20px;
 }
-/*! modal end */
+
+.modal-search .modal-title {
+  color: #fdc040 !important;
+}
+
+.modal-search .modal-text {
+  max-width: 57%;
+  margin-bottom: 20px;
+  font-size: 45px;
+  line-height: 1.23;
+}
+
+.modal-search .search-form button i {
+  font-size: 18px;
+  color: #7a7a7a;
+}
+.product-price .new-price {
+  font-size: 58px;
+  color: #3bb77e;
+}
+.product-price .save-price {
+  font-size: 12px;
+  color: #fdc040;
+  top: 25px;
+  font-weight: bold;
+}
+.product-price .old-price {
+  text-decoration: line-through;
+  color: #b6b6b6;
+  font-size: 28px;
+}
+
+.modal-wrapper .bi-x-circle {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*! modal search end */
