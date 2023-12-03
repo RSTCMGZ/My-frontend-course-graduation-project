@@ -338,6 +338,18 @@ header i {
 .sidebar .bi-star-half {
   color: gold;
 }
+.sidebar .hover {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 1px solid #ececec;
+  font-size: 17px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+}
+.sidebar .hoverr:hover {
+  border: none !important;
+}
+
 /*! blogs end */
 /*! shopping start */
 .basket {
