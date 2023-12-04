@@ -10,7 +10,10 @@ header {
   z-index: 999;
   background-color: #fff;
 }
-
+.header-mobile i {
+  font-size: 24px !important;
+  cursor: pointer;
+}
 .nav-item i {
   font-size: 25px;
 }
@@ -49,6 +52,29 @@ header {
 }
 header i {
   font-size: 15px;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    display: none !important;
+  }
+  .header-mobile {
+    position: relative;
+  }
+  .header-mobile i {
+    position: absolute;
+    top: -15px;
+  }
+  #navbarNav1 {
+    display: flex !important;
+  }
+  #navbarNav1 .navbar-nav {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: end !important;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 /*! header end */
 /*! slider start */
