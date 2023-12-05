@@ -24,8 +24,8 @@ header {
 .close-sidebar {
   display: inline-block;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 0;
+  left: 180px;
   font-size: 20px;
   cursor: pointer;
   z-index: 2;
@@ -475,7 +475,7 @@ header i {
 /*! shopping end */
 /*! modal start */
 /*! modal search start */
-.modal-search {
+.modal {
   position: absolute;
   top: 0;
   left: 0;
@@ -490,7 +490,7 @@ header i {
   transition: 0.3s ease all;
 }
 
-.modal-search::after {
+.modal::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -500,7 +500,10 @@ header i {
   left: 0;
   opacity: 0.5;
 }
-
+.modal.show {
+  visibility: visible !important;
+  opacity: 1;
+}
 .modal-wrapper {
   max-width: 800px;
   width: 100%;
@@ -515,18 +518,18 @@ header i {
   border-radius: 20px;
 }
 
-.modal-search .modal-title {
+.modal .modal-title {
   color: #fdc040 !important;
 }
 
-.modal-search .modal-text {
+.modal .modal-text {
   max-width: 57%;
   margin-bottom: 20px;
   font-size: 45px;
   line-height: 1.23;
 }
 
-.modal-search .search-form button i {
+.modal .search-form button i {
   font-size: 18px;
   color: #7a7a7a;
 }
@@ -546,11 +549,13 @@ header i {
   font-size: 28px;
 }
 
-.modal-wrapper .bi-x-circle {
+.modal-wrapper .circle {
   position: absolute;
+  display: block !important;
   top: 5px;
   right: 10px;
   font-size: 20px;
+  z-index: 2;
   cursor: pointer;
 }
 
