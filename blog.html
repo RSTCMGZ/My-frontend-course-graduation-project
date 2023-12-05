@@ -18,17 +18,22 @@
     <title>Shopus</title>
   </head>
   <body>
-    <!--! header start -->
-    <header>
+     <!--! header start -->
+     <header>
       <div class="header-bottom">
         <nav class="navbar navbar-expand-lg">
           <div class="container">
-            <button class="btn btn-success">
+            <div class="header-wrapper">
+              <div class="header-mobile">
+                <i class="bi bi-list" id="btn-menu"></i>
+              </div>
+          </div>
+            <button class="btn logo btn-success">
               <i class="bi bi-browser-chrome fw-bold"></i>
-              Browse All Categories <i class="bi bi-chevron-down"></i>
+              LOGO <i class="bi bi-chevron-down"></i>
             </button>
-            <div class="collapse navbar-collapse mx-5" id="navbarNav">
-              <ul class="navbar-nav justify-content-center w-100">
+            <div class="collapse sidebar-left navbar-collapse mx-5" id="navbarNav">
+              <ul class="navbar-nav sidebar-1 justify-content-center w-100">
                 <li class="nav-item">
                   <a
                     class="nav-link fw-bold fs-5"
@@ -52,41 +57,28 @@
                 </li>
               </ul>
             </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav1">
               <ul class="navbar-nav justify-content-center w-100">
-                <li class="nav-item">
+             
+           
+                <li class="nav-item  ">
                   <a
-                    class="nav-link position-relative"
-                    aria-current="page"
-                    href="#"
-                  >
-                    <span class="count">0</span>
-                    <i class="bi bi-arrow-repeat"></i>
-                    Compare
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link position-relative" href="#">
-                    <span class="count">0</span>
-
-                    <i class="bi bi-heart"></i>
-                    Wishlist
-                  </a>
-                </li>
-                <li class="nav-item tıkla">
-                  <a
-                    class="nav-link position-relative"
+                    class="nav-link tıkla  position-relative"
                     href="shopping-card.html"
                   >
                     <span class="count">0</span>
 
                     <i class="bi bi-cart"></i>
-                    Cart
+                    
                     <div class="container position-relative">
                       <div class="basket mt-3"></div>
                     </div>
                   </a>
+                </li>
+                <li class="nav-item d-flex align-items-center justify-content-center  ">
+                  <span class="">
+                    <a class="nav-link" href="shopping-card.html">Cart</a>
+                  </span>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link position-relative" href="login.html">
@@ -96,11 +88,14 @@
                 </li>
               </ul>
             </div>
-          </div>
+     
         </nav>
+        <i class="bi-x-circle" id="close-sidebar"></i>
       </div>
     </header>
     <!--! header end -->
+
+ 
     <!--! blogs start -->
     <section class="blogs">
       <h2 class="text-center mt-5 mb-5 text-success fw-bold">Blog & News</h2>
@@ -941,6 +936,8 @@
     </footer>
     <!--! footer end  -->
 
-    <script src="shopping.js"></script>
+    <script src="shopping.js" ></script>
+
+
   </body>
 </html>

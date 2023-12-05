@@ -18,110 +18,84 @@
     <title>Shopping-Basket</title>
   </head>
   <body>
-    <!--! header start -->
-    <header>
-      <div class="header-bottom">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container">
-            <button class="btn btn-success">
-              <i class="bi bi-browser-chrome fw-bold"></i>
-              Browse All Categories <i class="bi bi-chevron-down"></i>
-            </button>
-            <div class="collapse navbar-collapse mx-5" id="navbarNav">
-              <ul class="navbar-nav justify-content-center w-100">
-                <li class="nav-item">
-                  <a
-                    class="nav-link fw-bold fs-5"
-                    aria-current="page"
-                    href="index.html"
-                  >
-                    HOME
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link fw-bold fs-5" href="categories.html">
-                    SHOP
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link fw-bold fs-5" href="blog.html"> BLOG </a>
-                </li>
-                <li class="nav-item fw-bold fs-5">
-                  <a class="nav-link" href="contact.html"> CONTACT </a>
-                </li>
-              </ul>
+      <!--! header start -->
+      <header>
+        <div class="header-bottom">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <div class="header-wrapper">
+                <div class="header-mobile">
+                  <i class="bi bi-list" id="btn-menu"></i>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav justify-content-center w-100">
-                <li class="nav-item">
-                  <a
-                    class="nav-link position-relative"
-                    aria-current="page"
-                    href="#"
-                  >
-                    <span class="count">0</span>
-                    <i class="bi bi-arrow-repeat"></i>
-                    Compare
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link position-relative" href="#">
-                    <span class="count">0</span>
-
-                    <i class="bi bi-heart"></i>
-                    Wishlist
-                  </a>
-                </li>
-                <li class="nav-item tıkla">
-                  <a class="nav-link position-relative" href="#">
-                    <span class="count">0</span>
-
-                    <i class="bi bi-cart"></i>
-                    Cart
-                    <div class="container position-relative">
-                      <div class="basket mt-3"></div>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link position-relative" href="login.html">
-                    <i class="bi bi-person"></i>
-                    Account
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!--! header end -->
-
-    <!--! modal start -->
-    <section class="modal-search">
-      <div class="modal-wrapper">
-        <h6 class="modal-title mt-5">Deal of the Day</h6>
-
-        <h4 class="modal-text mt-5">
-          <a href="#" class="nav-link"
-            >Organic fruit for your family's health</a
-          >
-        </h4>
-        <div class="product-price mt-5 position-relative">
-          <span class="new-price"> $38 </span>
-          <span class="save-price position-absolute">26% Off</span>
-          <span class="old-price">$52</span>
+              <button class="btn logo btn-success">
+                <i class="bi bi-browser-chrome fw-bold"></i>
+                LOGO <i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="collapse sidebar-left navbar-collapse mx-5" id="navbarNav">
+                <ul class="navbar-nav sidebar-1 justify-content-center w-100">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link fw-bold fs-5"
+                      aria-current="page"
+                      href="index.html"
+                    >
+                      HOME
+                    </a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold fs-5" href="categories.html">
+                      SHOP
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold fs-5" href="blog.html"> BLOG </a>
+                  </li>
+                  <li class="nav-item fw-bold fs-5">
+                    <a class="nav-link" href="contact.html"> CONTACT </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse" id="navbarNav1">
+                <ul class="navbar-nav justify-content-center w-100">
+               
+             
+                  <li class="nav-item  ">
+                    <a
+                      class="nav-link tıkla  position-relative"
+                      href="shopping-card.html"
+                    >
+                      <span class="count">0</span>
+  
+                      <i class="bi bi-cart"></i>
+                      
+                      <div class="container position-relative">
+                        <div class="basket mt-3"></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item d-flex align-items-center justify-content-center  ">
+                    <span class="">
+                      <a class="nav-link" href="shopping-card.html">Cart</a>
+                    </span>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link position-relative" href="login.html">
+                      <i class="bi bi-person"></i>
+                      Account
+                    </a>
+                  </li>
+                </ul>
+              </div>
+       
+          </nav>
+          <i class="bi-x-circle" id="close-sidebar"></i>
         </div>
+      </header>
+      <!--! header end -->
 
-        <i class="bi bi-x-circle" id="close-search"></i>
-        <div class="button mt-2">
-          <a href="#" class="btn btn-success">Shop Now</a>
-        </div>
-      </div>
-    </section>
-    <!--! modal end -->
+
     <!--! shopping-cart start -->
     <section class="cart-page">
       <div class="container">
@@ -471,6 +445,9 @@
     </footer>
     <!--! footer end  -->
 
-    <script src="shopping.js"></script>
+    <script src="shopping.js" ></script>
+    <script src="sidebar.js" ></script>
+
+
   </body>
 </html>

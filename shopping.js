@@ -1,14 +1,10 @@
-
-
 const basket = document.querySelector(".basket")
 const tikla = document.querySelector(".tıkla")
-let api = "https://dummyjson.com/products"
-console.log(tikla);
-
-
 
 function showHide() {
+
     tikla.addEventListener("click", (event) => {
+
         if (!event.composedPath().includes(basket)) {
             basket.classList.toggle("hide")
         } else {
@@ -17,6 +13,7 @@ function showHide() {
             })
 
         }
+        event.preventDefault()
     })
 
 }
