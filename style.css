@@ -283,7 +283,18 @@ header i {
 .category .cards a:hover {
   color: #fdc040 !important;
 }
-
+@media (max-width: 1000px) {
+  .categories .categories_responsive {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+  .categories .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
 /*! categories end */
 /*! banners-card start  */
 .banner-text {
@@ -331,6 +342,30 @@ header i {
 .sells .col-9 .col-3 .card {
   width: 214px !important;
 }
+@media (max-width: 1000px) {
+  .responsive {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .arrows {
+    top: 5px;
+    right: 45%;
+  }
+  .responsive .row .col-3 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .responsive .row .col-3 .card {
+    width: 100% !important;
+  }
+}
+
 /*! best sells end  */
 /*! all start */
 .all .col-3 h4 {
@@ -348,9 +383,10 @@ header i {
   left: 0;
   background-color: #bce3c9;
 }
+
 /*! all end */
 /*! footer-top start */
-.footer-top .col-3 {
+.footer-top .footer-bg {
   width: 19%;
   background: #f4f6fa;
   border-radius: 10px;
@@ -359,6 +395,15 @@ header i {
 .footer-top h3 {
   font-size: 18px;
   color: #242424;
+}
+@media (max-width: 1000px) {
+  .footer-top .footer-bg {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
 }
 /*! footer-top end */
 /*! footer start */
@@ -379,6 +424,20 @@ header i {
 .icons i:hover {
   background-color: #000 !important;
 }
+@media (max-width: 1000px) {
+  .footer .col-9 .row .col-3,
+  .footer .col-3 {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .footer .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+}
+
 /*! footer end */
 /*! login start */
 .login {
