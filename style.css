@@ -284,6 +284,14 @@ header i {
 .category .cards a:hover {
   color: #fdc040 !important;
 }
+@media (max-width: 575px) {
+  .category .col-lg-9 .col-col {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 20px !important;
+  }
+}
 @media (max-width: 1000px) {
   .categories .categories_responsive {
     display: flex !important;
