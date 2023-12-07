@@ -76,7 +76,8 @@ header i {
     align-items: center !important;
     justify-content: space-between !important;
   }
-  .navbar-nav {
+  .sidebar-1,
+  .sidebar-2 {
     flex-direction: initial !important;
     gap: 20px;
   }
