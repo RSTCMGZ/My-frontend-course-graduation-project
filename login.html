@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Login</title>
+    <title class="title">Login</title>
   </head>
   <body>
     <!--! header start -->
@@ -116,6 +116,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Username or Email*"
+                      id="usernameSign"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
                     />
@@ -125,6 +126,7 @@
                       type="password"
                       class="form-control"
                       placeholder="Your Password*"
+                      id="passwordSign"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
                     />
@@ -161,7 +163,7 @@
               <div
                 class="d-flex align-items-center justify-content-center mt-3"
               >
-                <a href="#" class="btn btn-success w-50">Log in</a>
+                <a href="#" class="btn btn-success w-50" id="login">Log in</a>
               </div>
             </div>
           </div>
@@ -182,6 +184,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Username or Email*"
+                      id="usernameEnter"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
                     />
@@ -191,6 +194,7 @@
                       type="password"
                       class="form-control"
                       placeholder="Your Password*"
+                      id="passwordEnter"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
                     />
@@ -227,7 +231,7 @@
               <div
                 class="d-flex align-items-center justify-content-center mt-3"
               >
-                <a href="#" class="btn btn-success w-50">Log in</a>
+                <button class="btn btn-success w-50" id="btnEnter" onclick="enter()">Log in</button>
               </div>
             </div>
           </div>
@@ -507,6 +511,7 @@
   <!--! footer end  -->
     <script src="shopping.js" ></script>
     <script src="sidebar.js" ></script>
+    <script src="login.js" ></script>
 
 
   </body>
