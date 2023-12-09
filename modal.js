@@ -14,4 +14,4 @@ document.addEventListener("click", (e) => {
 
 setTimeout(() => {
     modal.classList.add("show");
-}, 3000);
+}, 2000);

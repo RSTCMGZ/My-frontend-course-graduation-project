@@ -34,4 +34,5 @@ function enter() {
     if (match.length != 0) {
         window.location.href = '/index.html';
     }
+
 }

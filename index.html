@@ -15,6 +15,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Shopus</title>
   </head>
   <body>
@@ -97,6 +99,7 @@
 
     <!--! modal start -->
     <section class="modal">
+   
       <div class="modal-wrapper position-relative">
         <h6 class="modal-title mt-5">Deal of the Day</h6>
 
@@ -116,6 +119,7 @@
           <a href="#" class="btn btn-success">Shop Now</a>
         </div>
       </div>
+    
     </section>
     <!--! modal end -->
 
@@ -197,32 +201,45 @@
           </div>
         </div>
         <div class="position-relative">
-          <div class="position-absolute arrows d-flex gap-3">
+          <div class="position-absolute arrows d-lg-flex  d-none gap-3">
             <i class="bi bi-arrow-left"></i>
             <i class="bi bi-arrow-right"></i>
           </div>
         </div>
         <div class="row gap-4 mt-5 mb-5">
-          <div class="col-2 featured">
-            <img src="img/categories/cat-1.png" class="img-fluid" alt="" />
-            <h6 class="fw-bold">Vegetables</h6>
+          <div class="col-lg-2 col-md-2 col-sm-2 featured">
+            <div data-aos="flip-up"      data-aos-duration="3000">
+                          <img src="img/categories/cat-1.png" class="img-fluid" alt="" />
+                          <h6 class="fw-bold">Vegetables</h6>
+            </div>
           </div>
-          <div class="col-2 featured">
-            <img src="img/categories/cat-1.png" class="img-fluid" alt="" />
-            <h6 class="fw-bold">Vegetables</h6>
+          <div class="col-lg-2  col-md-2 col-sm-2 featured">
+            <div data-aos="flip-up"      data-aos-duration="3000">
+            <img src="img/categories/cat-2.png" class="img-fluid" alt="" />
+            <h6 class="fw-bold">Strawberry</h6>
           </div>
-          <div class="col-2 featured">
-            <img src="img/categories/cat-1.png" class="img-fluid" alt="" />
-            <h6 class="fw-bold">Vegetables</h6>
+        </div>
+          <div class="col-lg-2  col-md-2 col-sm-2 featured">
+            <div data-aos="flip-up"      data-aos-duration="3000">
+
+            <img src="img/categories/cat-3.png" class="img-fluid" alt="" />
+            <h6 class="fw-bold">Snack</h6>
           </div>
-          <div class="col-2 featured">
-            <img src="img/categories/cat-1.png" class="img-fluid" alt="" />
-            <h6 class="fw-bold">Vegetables</h6>
+        </div>
+          <div class="col-lg-2  col-md-2 col-sm-2 featured">
+            <div data-aos="flip-up"      data-aos-duration="3000">
+
+            <img src="img/categories/cat-4.png" class="img-fluid" alt="" />
+            <h6 class="fw-bold">Black plum</h6>
           </div>
-          <div class="col-2 featured">
-            <img src="img/categories/cat-1.png" class="img-fluid" alt="" />
-            <h6 class="fw-bold">Vegetables</h6>
+        </div>
+          <div class="col-lg-2  col-md-2 col-sm-2 featured">
+            <div data-aos="flip-up"      data-aos-duration="3000">
+
+            <img src="img/categories/cat-5.png" class="img-fluid" alt="" />
+            <h6 class="fw-bold">Custard apple</h6>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -232,56 +249,65 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-lg-4  col-md-6  mt-3   position-relative">
-            <img
-              src="img/banners/banner-1.png"
-              class="rounded-5 img-fluid"
-              alt=""
-            />
-            <div class="banner-text position-absolute">
-              <h4>
-                Everyday Fresh & <br />
-                Clean with Our <br />
-                Products
-              </h4>
-              <a href="#" class="btn btn-success mt-3"
-                >Shop Now <i class="bi bi-arrow-right"></i>
-              </a>
+            <div data-aos="flip-left"      data-aos-duration="2000">
+              <img
+                src="img/banners/banner-1.png"
+                class="rounded-5 img-fluid"
+                alt=""
+              />
+              <div class="banner-text position-absolute">
+                <h4>
+                  Everyday Fresh & <br />
+                  Clean with Our <br />
+                  Products
+                </h4>
+                <a href="#" class="btn btn-success mt-3"
+                  >Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6  mt-3 position-relative">
+            <div data-aos="flip-right"      data-aos-duration="2000">
+              <img
+                src="img/banners/banner-2.png"
+                class="rounded-5 img-fluid"
+                alt=""
+              />
+              <div class="banner-text position-absolute">
+                <h4>
+                  Make your Breakfast
+                  <br />
+                  Healthy and <br />
+                  Easy
+                </h4>
+                <a href="#" class="btn btn-success mt-3"
+                  >Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+
             </div>
           </div>
           <div class="col-lg-4 col-md-6  mt-3 position-relative">
-            <img
-              src="img/banners/banner-2.png"
-              class="rounded-5 img-fluid"
-              alt=""
-            />
-            <div class="banner-text position-absolute">
-              <h4>
-                Make your Breakfast
-                <br />
-                Healthy and <br />
-                Easy
-              </h4>
-              <a href="#" class="btn btn-success mt-3"
-                >Shop Now <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6  mt-3 position-relative">
-            <img
-              src="img/banners/banner-3.png"
-              class="rounded-5 img-fluid"
-              alt=""
-            />
-            <div class="banner-text position-absolute">
-              <h4>
-                The best Organic
-                <br />
-                Products <br />
-                Online
-              </h4>
-              <a href="#" class="btn btn-success mt-3"
-                >Shop Now <i class="bi bi-arrow-right"></i>
-              </a>
+            <div data-aos="flip-left"      data-aos-duration="2000">
+
+              <img
+                src="img/banners/banner-3.png"
+                class="rounded-5 img-fluid"
+                alt=""
+              />
+              <div class="banner-text position-absolute">
+                <h4>
+                  The best Organic
+                  <br />
+                  Products <br />
+                  Online
+                </h4>
+                <a href="#" class="btn btn-success mt-3"
+                  >Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -327,7 +353,8 @@
         </div>
         <div class="row m-3">
           <div class="col-lg-1-5 col-md-3 col-12 col-sm-6 mt-3">
-            <div class="card">
+            <div class="card"  > 
+
               <img
                 src="img/products/product-1-1.jpg"
                 class="card-img-top"
@@ -1312,6 +1339,10 @@
       </div>
     </footer>
     <!--! footer end  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="shopping.js" ></script>
     <script src="modal.js" ></script>
     <script src="slider.js"></script>
