@@ -21,53 +21,44 @@
 // }
 // showHide()
 
-const countItems = document.querySelector('.count')
-countItems.innerHTML = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : '0';
 
-async function getData() {
-    const photos = await fetch("./data.json")
-    const data = await photos.json()
-    data ? localStorage.setItem("products", JSON.stringify(data)) : []
-    productsFunc()
-}
-localStorage.setItem('cart', JSON.stringify([]))
-getData()
-let products = []
-let cart = []
+let products = localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")) : []
+let cart = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : []
 
-cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
 
 function addToCart() {
-    const countItems = document.querySelector('.count')
-    const buttons = [...document.getElementsByClassName("add-to-cart")]
-    buttons.forEach((button) => {
-        const inCart = cart.find((item) => item.id === Number(button.dateset.id))
-        if (inCart) {
-            button.setAttribute('disabled', 'disabled')
-        } else {
-            button.addEventListener('click', function (e) {
-                e.preventDefault()
-                const id = e.target.dataset.id
-                const findProduct = products.filter((product) => product.id == Number(id))
-                cart.push({ ...findProduct, quantity: 1 })
-                localStorage.setItem('cart', JSON.stringify(cart))
-                button.setAttribute('disabled', 'disabled')
-                countItems.innerHTML = cart.length
-            })
-        }
+  const countItems = document.querySelector('.count')
+  const buttons = [...document.getElementsByClassName("add-to-cart")]
+  buttons.forEach((button) => {
+    const inCart = cart.find((item) => item.id === Number(button.dateset.id))
+    if (inCart) {
+      button.setAttribute('disabled', 'disabled')
+    } else {
+      button.addEventListener('click', function (e) {
+        e.preventDefault()
+        const id = e.target.dataset.id
+        const findProduct = products.filter((product) => product.id == Number(id))
+        cart.push({ ...findProduct, quantity: 1 })
+        localStorage.setItem('cart', JSON.stringify(cart))
+        button.setAttribute('disabled', 'disabled')
+        countItems.innerHTML = cart.length
+      })
+    }
 
-    })
+  })
 }
 
 function productsFunc() {
-    products = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
-    const productsContainer = document.getElementById("product-list")
-    const productsContainer2 = document.getElementById("product-list2")
-    const productsContainer3 = document.getElementById("product-list3")
-    let results = "";
-    products.forEach((item) => {
-        results += `
+
+  const productsContainer = document.getElementById("product-list")
+  const productsContainer2 = document.getElementById("product-list2")
+  const productsContainer3 = document.getElementById("product-list3")
+  let results = "";
+  products.forEach((item) => {
+    results += `
         <div class="card"  style="width: 12rem">
         <img
           src="${item.img.singleImage}"
@@ -98,11 +89,12 @@ function productsFunc() {
         </div>
         </div>
         `;
-        productsContainer.innerHTML = results
-        productsContainer2.innerHTML = results
-        productsContainer3.innerHTML = results
-        addToCart()
-    })
+    productsContainer ? productsContainer.innerHTML = results : ""
+    productsContainer2 ? productsContainer2.innerHTML = results : ""
+    productsContainer3 ? productsContainer3.innerHTML = results : ""
+    addToCart()
+  })
 
 }
-productsFunc()
+export default productsFunc
+
