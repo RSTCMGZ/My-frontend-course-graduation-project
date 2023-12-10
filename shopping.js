@@ -25,11 +25,25 @@ async function getData() {
     productsFunc()
 }
 getData()
+let products = []
+let cart = []
 
 
+function addToCart() {
+    const buttons = [...document.getElementsByClassName("add-to-cart")]
+    buttons.forEach((button) => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault()
+            const id = e.target.dataset.id
+            const findProduct = products.filter((product) => product.id == Number(id))
+            cart.push({ ...findProduct, quantity: 1 })
+            localStorage.setItem('cart', JSON.stringify(cart))
+        })
 
+    })
+}
 function productsFunc() {
-    const products = JSON.parse(localStorage.getItem('products'));
+    products = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
     const productsContainer = document.getElementById("product-list")
     const productsContainer2 = document.getElementById("product-list2")
     const productsContainer3 = document.getElementById("product-list3")
@@ -59,16 +73,18 @@ function productsFunc() {
             <span class="text-decoration-line-through"> $${item.oldPrice}
             </span>
           </div>
-          <a href="#" class="btn btn-success d-block mt-2">
+          <button type='button'  class="btn btn-success d-block mt-2 add-to-cart"  data-id=${item.id}>   
             <i class="mx-lg-2 bi-cart3"></i>
             Add To Card
-          </a>
+          </button>
         </div>
         </div>
         `;
+        productsContainer.innerHTML = results
+        productsContainer2.innerHTML = results
+        productsContainer3.innerHTML = results
+        addToCart()
     })
-    productsContainer.innerHTML = results
-    productsContainer2.innerHTML = results
-    productsContainer3.innerHTML = results
+
 }
 productsFunc()
