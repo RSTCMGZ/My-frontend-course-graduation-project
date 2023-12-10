@@ -284,6 +284,11 @@ header i {
 .category .cards a:hover {
   color: #fdc040 !important;
 }
+
+.category .card .btn:disabled {
+  opacity: 0.4;
+  cursor: no-drop !important;
+}
 @media (max-width: 770px) {
   .category .col-lg-9 .col-col {
     display: flex !important;

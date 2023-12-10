@@ -1,3 +1,5 @@
+
+
 // const basket = document.querySelector(".basket")
 // const tikla = document.querySelector(".tıkla")
 
@@ -18,30 +20,46 @@
 
 // }
 // showHide()
+
+const countItems = document.querySelector('.count')
+countItems.innerHTML = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : '0';
+
 async function getData() {
     const photos = await fetch("./data.json")
     const data = await photos.json()
     data ? localStorage.setItem("products", JSON.stringify(data)) : []
     productsFunc()
 }
+localStorage.setItem('cart', JSON.stringify([]))
 getData()
 let products = []
 let cart = []
 
+cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+
 
 function addToCart() {
+    const countItems = document.querySelector('.count')
     const buttons = [...document.getElementsByClassName("add-to-cart")]
     buttons.forEach((button) => {
-        button.addEventListener('click', function (e) {
-            e.preventDefault()
-            const id = e.target.dataset.id
-            const findProduct = products.filter((product) => product.id == Number(id))
-            cart.push({ ...findProduct, quantity: 1 })
-            localStorage.setItem('cart', JSON.stringify(cart))
-        })
+        const inCart = cart.find((item) => item.id === Number(button.dateset.id))
+        if (inCart) {
+            button.setAttribute('disabled', 'disabled')
+        } else {
+            button.addEventListener('click', function (e) {
+                e.preventDefault()
+                const id = e.target.dataset.id
+                const findProduct = products.filter((product) => product.id == Number(id))
+                cart.push({ ...findProduct, quantity: 1 })
+                localStorage.setItem('cart', JSON.stringify(cart))
+                button.setAttribute('disabled', 'disabled')
+                countItems.innerHTML = cart.length
+            })
+        }
 
     })
 }
+
 function productsFunc() {
     products = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
     const productsContainer = document.getElementById("product-list")
