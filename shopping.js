@@ -122,5 +122,5 @@ function productsFunc() {
 
   })
 }
-export default productsFunc()
+export default productsFunc
 
