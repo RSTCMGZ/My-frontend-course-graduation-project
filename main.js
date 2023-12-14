@@ -1,16 +1,18 @@
-import productFunc from "./shopping.js"
+import productsFunc from "./shopping.js"
 
 
 
+
+//! add product to localStorage
 async function getData() {
-    const photos = await fetch("./data.json")
-    const data = await photos.json()
-    data ? localStorage.setItem("products", JSON.stringify(data)) : []
-    productFunc()
+    const photos = await fetch("./data.json");
+    const data = await photos.json();
+
+    data ? localStorage.setItem("products", JSON.stringify(data)) : [];
 }
-getData()
 
-const countItems = document.querySelector('.count')
-countItems.innerHTML = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : '0';
+getData();
 
+const products = localStorage.getItem("products");
 
+localStorage.setItem('cart', JSON.stringify([]))

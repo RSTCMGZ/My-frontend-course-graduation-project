@@ -22,44 +22,70 @@
 // showHide()
 
 
-let products = localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")) : []
-let cart = localStorage.getItem("cart")
-  ? JSON.parse(localStorage.getItem("cart"))
-  : []
 
 
+// function addToCart() {
+//   const countItems = document.querySelector('.count')
+//   const buttons = [...document.getElementsByClassName("add-to-cart")]
+//   buttons.forEach((button) => {
+//     const inCart = cart.find((item) => item.id === Number(button.dateset.id))
+//     if (inCart) {
+//       button.setAttribute('disabled', 'disabled')
+//     } else {
+//       button.addEventListener('click', function (e) {
+//         e.preventDefault()
+//         const id = e.target.dataset.id
+//         const findProduct = products.filter((product) => product.id == Number(id))
+//         cart.push({ ...findProduct, quantity: 1 })
+//         localStorage.setItem('cart', JSON.stringify(cart))
+//         button.setAttribute('disabled', 'disabled')
+//         countItems.innerHTML = cart.length
+//       })
+//     }
+
+//   })
+// }
+let products = [];
+let cart = [];
+
+cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
 function addToCart() {
   const countItems = document.querySelector('.count')
   const buttons = [...document.getElementsByClassName("add-to-cart")]
   buttons.forEach((button) => {
-    const inCart = cart.find((item) => item.id === Number(button.dateset.id))
+    const inCart = cart.find((item) => item.id === Number(button.dataset.id))
     if (inCart) {
       button.setAttribute('disabled', 'disabled')
     } else {
       button.addEventListener('click', function (e) {
         e.preventDefault()
         const id = e.target.dataset.id
-        const findProduct = products.filter((product) => product.id == Number(id))
+        const findProduct = products.find((product) => product.id === Number(id));
+        console.log(findProduct);
         cart.push({ ...findProduct, quantity: 1 })
         localStorage.setItem('cart', JSON.stringify(cart))
         button.setAttribute('disabled', 'disabled')
         countItems.innerHTML = cart.length
       })
     }
-
   })
+
 }
 
 function productsFunc() {
 
+  products = localStorage.getItem("products")
+    ? JSON.parse(localStorage.getItem("products"))
+    : [];
   const productsContainer = document.getElementById("product-list")
   const productsContainer2 = document.getElementById("product-list2")
   const productsContainer3 = document.getElementById("product-list3")
+
   let results = "";
   products.forEach((item) => {
     results += `
-        <div class="card"  style="width: 12rem">
+          <div class="card"  style="width: 12rem">
         <img
           src="${item.img.singleImage}"
           class="card-img-top"
@@ -79,7 +105,7 @@ function productsFunc() {
 
           <div class="price text-center">
           $${item.price}
-            <span class="text-decoration-line-through"> $${item.oldPrice}
+            <span class="text-decoration-line-through"> $${item.oldPrice.toFixed(2)}
             </span>
           </div>
           <button type='button'  class="btn btn-success d-block mt-2 add-to-cart"  data-id=${item.id}>   
@@ -88,13 +114,13 @@ function productsFunc() {
           </button>
         </div>
         </div>
-        `;
+    `
     productsContainer ? productsContainer.innerHTML = results : ""
     productsContainer2 ? productsContainer2.innerHTML = results : ""
     productsContainer3 ? productsContainer3.innerHTML = results : ""
     addToCart()
-  })
 
+  })
 }
-export default productsFunc
+export default productsFunc()
 
