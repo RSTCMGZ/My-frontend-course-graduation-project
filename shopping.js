@@ -1,54 +1,33 @@
 
 
-// const basket = document.querySelector(".basket")
-// const tikla = document.querySelector(".tıkla")
+const basket = document.querySelector(".basket")
+const tikla = document.querySelector(".tıkla")
 
-// function showHide() {
+function showHide() {
 
-//     tikla.addEventListener("click", (event) => {
+  tikla.addEventListener("click", (event) => {
 
-//         if (!event.composedPath().includes(basket)) {
-//             basket.classList.toggle("hide")
-//         } else {
-//             document.addEventListener("click", () => {
-//                 basket.classList.add("d-none")
-//             })
+    if (!event.composedPath().includes(basket)) {
+      basket.classList.toggle("hide")
+    } else {
+      document.addEventListener("click", () => {
+        basket.classList.add("d-none")
+      })
 
-//         }
-//         event.preventDefault()
-//     })
+    }
+    event.preventDefault()
+  })
 
-// }
-// showHide()
-
-
+}
+showHide()
 
 
-// function addToCart() {
-//   const countItems = document.querySelector('.count')
-//   const buttons = [...document.getElementsByClassName("add-to-cart")]
-//   buttons.forEach((button) => {
-//     const inCart = cart.find((item) => item.id === Number(button.dateset.id))
-//     if (inCart) {
-//       button.setAttribute('disabled', 'disabled')
-//     } else {
-//       button.addEventListener('click', function (e) {
-//         e.preventDefault()
-//         const id = e.target.dataset.id
-//         const findProduct = products.filter((product) => product.id == Number(id))
-//         cart.push({ ...findProduct, quantity: 1 })
-//         localStorage.setItem('cart', JSON.stringify(cart))
-//         button.setAttribute('disabled', 'disabled')
-//         countItems.innerHTML = cart.length
-//       })
-//     }
 
-//   })
-// }
+
+
 let products = [];
-let cart = [];
 
-cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+export let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
 function addToCart() {
   const countItems = document.querySelector('.count')
