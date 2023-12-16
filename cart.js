@@ -40,10 +40,16 @@ function removeCartItem() {
   btnDeleteCart.forEach((button) => {
     button.addEventListener("click", function (e) {
       const id = e.target.dataset.id;
+      const deleteDiv = document.querySelectorAll(".cart-item")
+
       cart = cart.filter((item) => item.id !== Number(id))
-      displayCartProduct()
+
       localStorage.setItem("cart", JSON.stringify(cart))
+
+      deleteDiv[0].remove()
       countItems.innerHTML = cart.length
+
+      displayCartProduct()
       saveCartValues()
     });
   });

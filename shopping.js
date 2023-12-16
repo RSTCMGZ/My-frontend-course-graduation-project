@@ -1,25 +1,25 @@
 
 
-const basket = document.querySelector(".basket")
-const tikla = document.querySelector(".tıkla")
+// const basket = document.querySelector(".basket")
+// const tikla = document.querySelector(".tıkla")
 
-function showHide() {
+// function showHide() {
 
-  tikla.addEventListener("click", (event) => {
+//   tikla.addEventListener("click", (event) => {
 
-    if (!event.composedPath().includes(basket)) {
-      basket.classList.toggle("hide")
-    } else {
-      document.addEventListener("click", () => {
-        basket.classList.add("d-none")
-      })
+//     if (!event.composedPath().includes(basket)) {
+//       basket.classList.toggle("hide")
+//     } else {
+//       document.addEventListener("click", () => {
+//         basket.classList.add("d-none")
+//       })
 
-    }
-    event.preventDefault()
-  })
+//     }
+//     event.preventDefault()
+//   })
 
-}
-showHide()
+// }
+// showHide()
 
 
 
